@@ -1,0 +1,54 @@
+<div class="title">
+  <div class="left">
+    <mat-icon class="arrow-icon">navigate_next</mat-icon>
+    <h1>Courses</h1>
+  </div>
+  <div class="right" routerLink="/addcourselist" (click)="onAddCourse()">
+    <mat-icon class="arrow-icon bg-color">add</mat-icon>
+    <h1>Add Course</h1>
+  </div>
+</div>
+<div class="container" *ngIf="formData.length > 0">
+  <mat-card
+    class="example-card"
+    appearance="outlined"
+    *ngFor="let item of formData"
+  >
+    <mat-card-header routerLink="/courseslist">
+      <mat-card-title>{{ item.title }}</mat-card-title>
+    </mat-card-header>
+    <video
+      type="video/mp4"
+      src="../../../assets{{ item.filePath }}"
+      controls
+    ></video>
+    <mat-card-content>
+      <p routerLink="/courseslist" *ngIf="item.description.length > 180">
+        {{ item.description.slice(0, 180) + " ..."
+        }}<span class="primary">View More</span>
+      </p>
+      <p routerLink="/courseslist" *ngIf="item.description.length < 180">
+        {{ item.description }}
+      </p>
+      <!-- <ng-template *ngIf="item.description.length > 180; else lessDes">
+        
+      </ng-template> -->
+      <!-- <ng-template #lessDes>
+        <p routerLink="/courseslist">
+          {{ item.description }}
+        </p>
+      </ng-template> -->
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="onEditCourse()"
+        routerLink="/updatedelete/{{ item._id }}"
+      >
+        Edit
+      </button>
+      <button mat-raised-button color="primary">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

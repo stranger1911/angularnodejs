@@ -1,0 +1,106 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  display: flex;
+  padding: 1rem 1rem 0 1rem;
+  gap: 1rem;
+}
+
+.right {
+  cursor: pointer;
+}
+
+.arrow-icon {
+  font-size: 2rem;
+}
+
+.bg-color {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+mat-card {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+}
+
+video {
+  width: 25%;
+}
+
+mat-card-content {
+  padding: 1rem;
+}
+
+.content-description {
+  width: 100%;
+}
+
+.views {
+  width: 70%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  /* background-color: red; */
+}
+
+p {
+  margin: 0.5rem 0 0 0;
+}
+
+.likes-dislikes {
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+
+.action-btn {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.likes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.likes-count {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+mat-icon {
+  cursor: pointer;
+}

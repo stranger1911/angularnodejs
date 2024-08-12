@@ -1,0 +1,31 @@
+.lists {
+  width: 12rem;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  margin-bottom: -0.35rem;
+  margin-right: 0.4rem;
+}
+
+mat-icon {
+  color: var(--primary-color);
+}
+
+span {
+  color: var(--accent-color);
+}
+
+mat-form-field {
+  margin-top: 1.35rem;
+}
+
+mat-toolbar {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}

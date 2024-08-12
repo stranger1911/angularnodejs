@@ -1,0 +1,133 @@
+<div class="title" *ngIf="editCourse">
+  <div class="left">
+    <mat-icon class="arrow-icon">navigate_next</mat-icon>
+    <h1>Edit Course</h1>
+  </div>
+  <div class="right" routerLink="/addcourses">
+    <mat-icon class="arrow-icon bg-color">navigate_next</mat-icon>
+    <h1>Back</h1>
+  </div>
+</div>
+
+<div class="container" *ngIf="editCourse">
+  <div class="form">
+    <form #myForm="ngForm" (ngSubmit)="onSaveCourse(myForm)">
+      <mat-form-field>
+        <mat-label>Edit Title</mat-label>
+        <input
+          matInput
+          placeholder="Edit Title..."
+          name="title"
+          [(ngModel)]="singleCourseData.title"
+          required
+        />
+      </mat-form-field>
+      <div class="file" (click)="triggerFileInput()">
+        <span class="file-header" *ngIf="!fileName">{{
+          singleCourseData.filePath
+        }}</span>
+        <span class="file-header" *ngIf="fileName">{{
+          fileName || "No file chosen"
+        }}</span>
+        <input
+          type="file"
+          #fileInput
+          (change)="onFileSelected($event)"
+          class="file-input"
+          required
+          name="file"
+          [(ngModel)]="singleCourseData.filePath"
+        />
+      </div>
+      <mat-form-field>
+        <mat-label>Edit Description</mat-label>
+        <textarea
+          matInput
+          placeholder="Edit Description..."
+          class="description"
+          name="description"
+          [(ngModel)]="singleCourseData.description"
+          required
+        ></textarea>
+      </mat-form-field>
+      <div class="action-btn">
+        <button mat-raised-button color="primary" routerLink="/addcourses">
+          Cancel
+        </button>
+        <button mat-raised-button color="accent" routerLink="/addcourses">
+          Save Course
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Edit course list starts form here -->
+
+<div class="title" *ngIf="editCourseList">
+  <div class="left">
+    <mat-icon class="arrow-icon">navigate_next</mat-icon>
+    <h1>Edit Course List</h1>
+  </div>
+  <div class="right" routerLink="/courseslist">
+    <mat-icon class="arrow-icon bg-color">navigate_next</mat-icon>
+    <h1>Back</h1>
+  </div>
+</div>
+
+<div class="container" *ngIf="editCourseList">
+  <div class="form">
+    <form #myForm="ngForm">
+      <mat-form-field>
+        <mat-label>Edit Title</mat-label>
+        <input
+          matInput
+          placeholder="Edit Title..."
+          name="title"
+          [ngModel]="singleCourseData.title"
+          required
+        />
+      </mat-form-field>
+      <div class="file" (click)="triggerFileInput()">
+        <span class="file-header" *ngIf="!fileName">{{
+          singleCourseData.filePath
+        }}</span>
+        <span class="file-header" *ngIf="fileName">{{
+          fileName || "No file chosen"
+        }}</span>
+        <input
+          type="file"
+          #fileInput
+          (change)="onFileSelected($event)"
+          class="file-input"
+          required
+          name="file"
+        />
+      </div>
+      <mat-form-field>
+        <mat-label>Edit Description</mat-label>
+        <textarea
+          matInput
+          placeholder="Edit Description..."
+          class="description"
+          name="description"
+          [ngModel]="singleCourseData.description"
+          required
+        ></textarea>
+      </mat-form-field>
+      <div class="action-btn">
+        <button mat-raised-button color="primary" routerLink="/courseslist">
+          Cancel
+        </button>
+        <button
+          mat-raised-button
+          color="accent"
+          routerLink="/courseslist"
+          type="submit"
+        >
+          Save Course List
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

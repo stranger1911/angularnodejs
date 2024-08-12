@@ -1,0 +1,53 @@
+<div class="title">
+  <div class="left">
+    <mat-icon class="arrow-icon">navigate_next</mat-icon>
+    <h1>Course List</h1>
+  </div>
+  <div class="right" routerLink="/addcourselist">
+    <mat-icon class="arrow-icon bg-color" (click)="onAddCourseList()"
+      >add</mat-icon
+    >
+    <h1>Add Course List</h1>
+  </div>
+  <div class="right" routerLink="/addcourses">
+    <mat-icon class="arrow-icon bg-color">navigate_next</mat-icon>
+    <h1>Back</h1>
+  </div>
+</div>
+<div class="container">
+  <mat-card class="example-card" appearance="outlined">
+    <video
+      src="../../../assets/Videos/Angular_JS_blog_Giff.mp4"
+      alt="Angular Course"
+      controls
+    ></video>
+    <mat-card-content>
+      <div class="content-description">
+        <p routerLink="/courseslist">
+          The Shiba Inu is the smallest of the six original and distinct spitz
+          breeds of dog from Japan. A small, agile dog that copes very well with
+          mountainous terrain.
+        </p>
+        <div class="views">
+          <p class="view-count"><span>200k</span> Views</p>
+          <div class="likes-dislikes">
+            <div class="likes">
+              <p class="likes-count">200K</p>
+              <mat-icon color="primary">thumb_up</mat-icon>
+            </div>
+            <mat-icon color="accent">thumb_down</mat-icon>
+          </div>
+          <div class="action-btn">
+            <mat-icon
+              color="accent"
+              routerLink="/updatedelete/6696c106b602f09d6f7ccff6"
+              (click)="onEditCourseList()"
+              >edit</mat-icon
+            >
+            <mat-icon color="primary">delete</mat-icon>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

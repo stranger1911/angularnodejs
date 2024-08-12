@@ -1,0 +1,52 @@
+<div class="title">
+  <div class="left">
+    <mat-icon class="arrow-icon">navigate_next</mat-icon>
+    <h1>Interview Questions List</h1>
+  </div>
+  <div class="right" routerLink="/addinterview">
+    <mat-icon class="arrow-icon bg-color">navigate_next</mat-icon>
+    <h1>Back</h1>
+  </div>
+</div>
+<div class="container">
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState.set(true)"
+      (closed)="panelOpenState.set(false)"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Self aware panel </mat-panel-title>
+        <div class="update-delete">
+          <mat-icon color="accent">edit</mat-icon>
+          <mat-icon color="primary">delete</mat-icon>
+        </div>
+      </mat-expansion-panel-header>
+      <hr />
+      <div class="answers">
+        <pre>
+          I'm visible because I am open Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur, eligendi eum iure in fugiat? Cumque, recusandae facilis eligendi dolorum unde, similique quos corrupti, iste consequuntur reiciendis temporibus? Ad, vero.</pre
+        >
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState.set(true)"
+      (closed)="panelOpenState.set(false)"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Self aware panel </mat-panel-title>
+        <div class="update-delete">
+          <mat-icon color="accent" routerLink="/updatedelete">edit</mat-icon>
+          <mat-icon color="primary">delete</mat-icon>
+        </div>
+      </mat-expansion-panel-header>
+      <hr />
+      <div class="answers">
+        <pre>
+         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque possimus dolor, labore debitis aut, quam fugiat iste quae est assumenda natus sit tempore sunt sed nihil ducimus quod, quia laborum. I'm visible because I am open Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur, eligendi eum iure in fugiat? Cumque, recusandae facilis eligendi dolorum unde, similique quos corrupti, iste consequuntur reiciendis temporibus? Ad, vero.</pre
+        >
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
